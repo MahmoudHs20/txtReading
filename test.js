@@ -2,6 +2,6 @@
 window.onload = () =>{
  document.getElementById("btn").onclick = () =>{
   console.log("sad");
-  fetch("test.json").then(res => console.log( res.json() ) );
+  fetch("test.json").then(res => res.json()).then(json => console.log(json))
 }
 }
