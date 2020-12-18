@@ -1,10 +1,10 @@
-async function getData(){
+ async function getData(){
   const response = await fetch("test.json").then( res => res.json() );
- return response;
+  return response;
 }
-window.onload = () =>{
+window.onload = async function(){
  document.getElementById("btn").onclick = () =>{
-   const data = getData();
+   const data = await getData();
   console.log(data);
 }
 }
