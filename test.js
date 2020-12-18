@@ -1,9 +1,7 @@
 window.onload = ()=>{
-     var data;
-     $.getJSON("test.json", function(json) {
-      data = json;
-});
  document.getElementById("btn").onclick = () => {
-   console.log(data);
+  fetch("test.json")
+  .then(response => response.json())
+  .then(json => console.log(json));
 }
 }
