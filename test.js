@@ -2,7 +2,9 @@ window.onload = ()=>{
   var data;
   fetch("test.json")
   .then(response => response.json())
-  .then(json => data = json);
+  .then(json => {
+     data = json;
+  });
  document.getElementById("btn").onclick = () => {
     var list = `
              <ul>
