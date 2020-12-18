@@ -9,6 +9,6 @@ window.onload = ()=>{
                 <li>${data.name}</li>
              </ul>
                `;
-    document.querySelector("body").appendChild(list);
+    document.querySelector("div").innerHTML = list;
  }
 }
