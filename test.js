@@ -1,7 +1,10 @@
-
+async function getData(){
+  const response = await fetch("test.json").then( res => res.json() );
+ return response;
+}
 window.onload = () =>{
  document.getElementById("btn").onclick = () =>{
-  console.log("sad");
-  fetch("text.txt").then(res => console.log(res.text()));
+   const data = getData();
+  console.log(data);
 }
 }
